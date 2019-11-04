@@ -17,7 +17,7 @@
                         {!! Form::close() !!}
                     @else
                         {!! Form::open(['route' => ['favorites.favorite', $micropost->id]]) !!}
-                            {!! Form::submit('Favorite', ['class' => "btn btn-secondary"]) !!}
+                            {!! Form::submit('unfavorite', ['class' => "btn btn-secondary"]) !!}
                         {!! Form::close() !!}
                     @endif
                     </div>

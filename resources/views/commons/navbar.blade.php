@@ -15,7 +15,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="dropdown-item"><a href="{{ route('users.show', ['id' => Auth::id()]) }}">My profile</a></li>
-                            <li class="dropdown-item"><a href="{{ route('users.favorites', ['id' => $user->id]) }}">Favorites</a></li>
+                            <li class="dropdown-item"><a href="{{ route('users.favorites', ['id' => Auth::id()]) }}">Favorites</a></li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><a href="{{ route('logout.get') }}">Logout</a></li>
                         </ul>
