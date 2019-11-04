@@ -13,11 +13,11 @@
                     <div class="col-xs-3 mr-1">
                     @if(Auth::user()->is_favorite($micropost->id))
                         {!! Form::open(['route' => ['favorites.unfavorite', $micropost->id], 'method' => 'delete']) !!}
-                            {!! Form::submit('Favorite', ['class' => "btn btn-success"]) !!}
+                            {!! Form::submit('unfavorite', ['class' => "btn btn-secondary"]) !!}
                         {!! Form::close() !!}
                     @else
                         {!! Form::open(['route' => ['favorites.favorite', $micropost->id]]) !!}
-                            {!! Form::submit('unfavorite', ['class' => "btn btn-secondary"]) !!}
+                            {!! Form::submit('Favorite', ['class' => "btn btn-success"]) !!}
                         {!! Form::close() !!}
                     @endif
                     </div>
